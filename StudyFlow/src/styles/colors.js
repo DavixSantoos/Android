@@ -1,10 +1,10 @@
 //centraliza as cores do aplicativo
 
-import { ImageBackground } from "react-native/types_generated/index";
+
 
 export const colors = {
     //cores principais da identidade visual 
-    primary: '#349',
+    primary: 'rgba(18, 31, 209, 1)',
     primaryDark: 'rgba(28, 173, 209, 1)',
     secondary: '#f49399',
 

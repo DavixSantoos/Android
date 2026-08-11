@@ -8,22 +8,22 @@ import SplashScreen from "../screens/SplashScreen";
 
 // Cria um objeto que gerencia uma pilha de telas.
 const Stack = createNativeStackNavigator();
-export default function AppRoutes(){
-    return(
+export default function AppRoutes() {
+    return (
         //ele envolve todos os navegadores
 
         <NavigationContainer>
             {/* criar as nossas navegações  */}
-        <Stack.Navigator
-        initialRouteName="Splash"
-        screenOptions={{
-            // Oculta o cabecalho padrão
-            headerShown: false,
-            }}>
-                <Stack.Screen name="Splash" component={SplashScreen}/>
+            <Stack.Navigator
+                initialRouteName="Splash"
+                screenOptions={{
+                    // Oculta o cabecalho padrão
+                    headerShown: false,
+                }}>
+                <Stack.Screen name="Splash" component={SplashScreen} />
 
 
-    
+
 
 
             </Stack.Navigator>
