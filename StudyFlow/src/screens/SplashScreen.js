@@ -46,10 +46,10 @@ export default function SplashScreen({ navigation }) {
     }, [navigation, opacity, scale])
 
     return (
-        <View style={style.container}>
+        <View style={styles.container}>
             <Animated.View
                 style={[
-                    style.content,
+                    styles.content,
                     {
                         opacity,
                         transform: [{ scale }],
@@ -57,15 +57,15 @@ export default function SplashScreen({ navigation }) {
 
                 ]}
             >
-                <Text style={style.logo}>SF</Text>
-                <Text style={style.title}>StudyFlow</Text>
-                <Text style={style.subtitle}>Organize seus estudos. evolua todos os dias</Text>
+                <Text style={styles.logo}>SF</Text>
+                <Text style={styles.title}>StudyFlow</Text>
+                <Text style={styles.subtitle}>Organize seus estudos. evolua todos os dias</Text>
 
             </Animated.View>
         </View>
     )
 }
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         alighItems: 'center',
