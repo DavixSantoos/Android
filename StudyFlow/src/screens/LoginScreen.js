@@ -3,6 +3,7 @@ import { useState } from "react";
 import { KeyboardAvoidingView, Platform, StyleSheet, Text, View, ScrollView } from "react-native";
 import InputField from "../compenents/inputField";
 import PrimaryButton from "../compenents/PrimaryButton";
+import { colors } from "../styles/colors";
 
 
 const VALID_EMAIL = 'aluno@senac.com';
@@ -49,7 +50,7 @@ export default function LoginScreen({ navigation }) {
                 keyboardShouldPersistTaps="handled"
             >
 
-                <View style={styles.container}>
+                <View style={styles.header}>
                     <Text style={styles.logo}>SF</Text>
                     <Text style={styles.title}>Bem-Vindo ao StudyFlow</Text>
                     <Text style={styles.subtitle}>Entre para acompanhar sua rotina de estudos</Text>
@@ -90,7 +91,40 @@ export default function LoginScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    keyboardArea: {
+        flex: 1,
+        backgroundColor: colors.background,
+    },
+
     container: {
         flexGrow: 1,
+        justifyContent: 'center',
+        padding: 24,
+        gap: 36,
+    },
+    header: {
+        alignItems: 'center',
+        gap: 1,
+    },
+    logo: {
+        color: colors.primary,
+        fontSize: 58,
+        fontWeight: '800'
+    },
+    title: {
+        maxWidth: 320,
+        color: colors.textlight,
+        fontSize: 15,
+        lineHeight: 22,
+        textAlign: 'center',
+    },
+    form: {
+        gap: 18,
+    },
+    errorText: {
+        color: colors.erro,
+        fontSize: 14,
+        fontWeight: '600',
     }
+
 })
