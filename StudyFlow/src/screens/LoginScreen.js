@@ -1,9 +1,10 @@
 // tela de login local 
 import { useState } from "react";
 import { KeyboardAvoidingView, Platform, StyleSheet, Text, View, ScrollView } from "react-native";
-import InputField from "../compenents/inputField";
+
 import PrimaryButton from "../compenents/PrimaryButton";
 import { colors } from "../styles/colors";
+import InputField from "../compenents/inputField";
 
 
 const VALID_EMAIL = 'aluno@senac.com';
@@ -58,6 +59,7 @@ export default function LoginScreen({ navigation }) {
 
                 <View style={styles.form}>
                     <InputField
+
                         label="E-mail"
                         value={email}
                         onChangeText={setEmail}
@@ -79,7 +81,8 @@ export default function LoginScreen({ navigation }) {
                         <Text style={styles.errorText}>{erroMenssage}</Text>
                     ) : null}
 
-                    <PrimaryButton title="Entrar" Onpress={handleLogin} />
+                    <PrimaryButton title="Entrar" onPress={handleLogin} />
+
 
 
 
